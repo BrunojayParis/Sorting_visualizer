@@ -1,12 +1,15 @@
 import React from 'react';
 
 
-const Actions=({setBars})=>{
+
+
+const Actions=({setState})=>{
 
 
     return(
         <div className= "Actions">
-            <button onClick={setBars} > RESETTTT</button>
+            <button onClick={setState} > RESETTTT</button>
+            
         </div>
     )
 }
