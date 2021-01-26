@@ -7,16 +7,12 @@ import './App.css';
 
 function App() {
   const [state, setState]= useState([])
-
-  setState(resetArray)
-
-  function resetArray(){
-    const array = [];
-    for(let i=0; i<100; i++){
-        array.push(randomInteger(5, 1000));    
+  const array = [];
+  for(let i=0; i<100; i++){
+      array.push(randomInteger(5, 1000));    
     }
-    return array;
-  }
+    setState(array);
+
   function randomInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
   }
@@ -26,7 +22,7 @@ function App() {
       <SortingComponent state={state} setState={setState}/>
       <Actions setState={setState} state={state} />
       
-        
+
     </div>
   );
 }
