@@ -1,10 +1,10 @@
 import React from 'react';
 
-const SortingComponent =({setState})=>{
+const SortingComponent =({state})=>{
     
     return(
         <div className="sorted_numbers">            
-                {setState.map((value, idx) => (
+                {state.map((value, idx) => (
                     <div
                     className= "number_bar" 
                     key = {idx} 
