@@ -1,6 +1,5 @@
 import React , {useState}from 'react';
 import SortingComponent from "./components/Sortingcomponent";
-import Actions from "./components/Actions";
 import './App.css';
 
 
@@ -15,18 +14,22 @@ function App() {
     for(let i=0;i<100;i++){
       array.push(getRandomArbitrary(5, 1000));
     };
-    setState(array)
+    setState(array) 
   }
-  
+  function quickSort(){
+    const array = state;
+    const sortedArray = array.slice().sort((a,b)=>a-b)
+    setState(sortedArray)
 
-
-  console.log(state)
+  }
 
 
   return (
     <div className="App">
-      <button onClick={resetArray}>RESTART</button>
       <SortingComponent state={state}/>
+      <button onClick= {resetArray}>RESTART</button>
+      <button onClick= {quickSort}>quick Sort</button>
+      
     </div>
   );
 }
