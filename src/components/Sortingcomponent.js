@@ -8,8 +8,11 @@ const SortingComponent =({state})=>{
                     <div
                     className= "number_bar" 
                     key = {idx} 
-                    style = {{height: `${value * 70 / 1000}vh`}}>
-                        {value}
+                    style = {{
+                        backgroundColor: "black",
+                        height: `${value * 70 / 1000}vh`}}>
+                            {value}
+                        
                     </div>
                 ))} 
                            
