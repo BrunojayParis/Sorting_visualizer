@@ -4,16 +4,7 @@ import {getMergeSortAnimations} from "./components/Sortingalgorithms.js"
 import './App.css';
 
 // Change this value for the speed of the animations.
-const ANIMATION_SPEED_MS = 1;
-
-// Change this value for the number of bars (value) in the array.
-const NUMBER_OF_ARRAY_BARS = 310;
-
-// This is the main color of the array bars.
-const PRIMARY_COLOR = 'black';
-
-// This is the color of array bars that are being compared throughout the animations.
-const SECONDARY_COLOR = 'red';
+const ANIMATION_SPEED_MS = 5;
 
 
 function App() {
@@ -24,15 +15,15 @@ function App() {
   }
   function resetArray(){
     const array = [];
-    for(let i=0;i<10;i++){
+    for(let i=0;i<100;i++){
       array.push(getRandomArbitrary(5, 1000));
     };
-    setState(array) 
+    setState(array); 
   }
   function quickSort(){
     const array = state;
-    const sortedArray = array.slice().sort((a,b)=>a-b)
-    setState(sortedArray)
+    const sortedArray = array.slice().sort((a,b)=>a-b);
+    setState(sortedArray);
   }
   function mergeSort(){
     const array = state;
